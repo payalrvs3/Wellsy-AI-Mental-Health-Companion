@@ -27,7 +27,7 @@ safety-aware responses, and crisis support handling</b>.
 <p>
 👉 <b>Live App:</b>
 <a href="https://wellsy.streamlit.app/" target="_blank">
-https://your-app-name.streamlit.app
+https://wellsy.streamlit.app/
 </a>
 </p>
 
