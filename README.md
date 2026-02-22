@@ -1,234 +1,214 @@
-<h2>🧠 Wellsy – AI Mental Health Companion</h2>
-
-Designed for Mental Wellness
-
-Wellsy is a secure, AI-powered mental health companion built using Streamlit and Python, designed to provide users with a safe, empathetic, and structured space to express their thoughts and emotions.
-
-Unlike generic chatbots, Wellsy includes user authentication, multiple AI personas, persistent chat sessions, safety-aware responses, and crisis support handling, making it suitable for academic evaluation, real-world demos, and portfolio showcasing.
-
-<h3>🔗 Live Application</h3>
-👉 Live App URL: https://wellsy.streamlit.app/
-
-<h3>🎯 Problem Statement</h3>
-Mental health challenges such as stress, anxiety, emotional overwhelm, and negative thought patterns are increasingly common. However:
-
-Immediate mental health support is not always accessible
-
-Social stigma prevents open expression
-
-Professional help may not be instantly available
-
-There is a need for a safe, non-judgmental, always-available digital companion that supports users emotionally while encouraging healthy coping mechanisms.
-
-
-<h3>💡 Proposed Solution</h3>
-
-Wellsy provides a web-based AI mental health companion that:
-
-Allows users to securely log in and manage conversations
-
-Offers multiple AI personas tailored to different emotional needs
-
-Maintains chat history and session continuity
-
-Responds with empathetic, safety-aware, and context-aware messages
-
-Encourages external help during crisis situations
-
-
-<h3>✨ Key Features</h3>
-
-<h4>🔐 Authentication & User Management</h4>
-
-Secure login and registration system
-
-Password-based authentication
-
-User-specific chat sessions and memory
-
-<h4>💬 Persistent Chat Sessions</h4>
-
-Create multiple chat sessions
-
-Rename or delete past conversations
-
-Chat history stored and reloaded automatically
-
-Session continuity using database + Streamlit session state
-
-
-<h4>🧠 Multiple AI Personas</h4>
-
-Users can choose how they want to be supported:
-
-**Wellsy Counselor
-**Balanced, structured, professional mental health guidance
-
-**Empathetic Listener
-**Deep emotional validation and non-judgmental listening
-
-**Growth Coach
-**Encouraging, motivational support focused on positive action
-
-**CBT Companion
-**Cognitive Behavioral Therapy–based thought reframing and reflection
-
-Each persona uses custom system prompts to control tone, behavior, and safety.
-
-
-<h3>🚨 Built-in Safety & Crisis Handling</h3>
-
-Global mental health safety layer
-
-Detects severe emotional distress or self-harm expressions
-
-Encourages:
-
-Reaching out to trusted people
-
-Seeking professional help
-
-Contacting emergency services if needed
-
-Country-based crisis resources (India, USA, UK, Canada)
-
-Never presents itself as a replacement for professional care
-
-<h4>🌍 Location-Aware Safety Support</h4>
-
-Optional country selection
-
-Displays relevant crisis helpline information
-
-Falls back to general emergency guidance if location is unknown
-
-<h4>🖥️ User Experience & Interface</h4>
-
-Clean, minimal, distraction-free UI
-
-Chat-style message display
-
-Auto-scroll for new messages
-
-Loading spinner while AI responds
-
-Light & dark theme support
-
-Inspirational wellness quotes on login screen
-
-
-<h3>🧩 Application Workflow</h3>
-
-User registers or logs in securely
-
-User selects an AI persona and (optionally) country
-
-User creates or selects a chat session
-
-User enters thoughts or concerns
-
-AI generates a context-aware, persona-based response
-
-Conversation is stored and persisted
-
-Safety layer activates when high-risk language is detected
-
-
-<h3>⚙️ System Architecture</h3>
-<h6>🔹 Frontend</h6>
-
-Streamlit UI
-
-Sidebar-based navigation
-
-Chat input and message rendering
-
-<h6>🔹 Backend Logic</h6>
-
-Python-based session handling
-
-Database-backed user & chat storage
-
-Session state for smooth UX
-
-<h6>🔹 AI Layer</h6>
-
-Groq API (llama-3.3-70b-versatile)
-
-Persona-based system prompts
-
-Memory-based conversation context
-
-Controlled temperature and token limits
-
-<h6>🔹 Deployment</h6>
-
-GitHub for version control
-
-Streamlit Community Cloud for hosting
-
-Secrets Manager for secure keys
-
-
-<h4>📁 Project Structure</h4>
+<h1 align="center">🧠 Wellsy – AI Mental Health Companion</h1>
+
+<p align="center">
+  <b>Designed for Mental Wellness • Built with Streamlit & AI</b>
+</p>
+
+<p align="center">
+  <img src="img/logo.png" alt="Wellsy Logo" width="180"/>
+</p>
+
+<hr>
+
+<h2>🌱 Overview</h2>
+<p>
+<b>Wellsy</b> is a secure, AI-powered mental health companion designed to provide users with a
+<strong>safe, empathetic, and structured space</strong> to express emotions and thoughts.
+</p>
+
+<p>
+Unlike generic chatbots, Wellsy includes <b>authentication, multiple AI personas, persistent chat sessions,
+safety-aware responses, and crisis support handling</b>.
+</p>
+
+<hr>
+
+<h2>🔗 Live Application</h2>
+<p>
+👉 <b>Live App:</b>
+<a href="https://wellsy.streamlit.app/" target="_blank">
+https://your-app-name.streamlit.app
+</a>
+</p>
+
+<hr>
+
+<h2>🎯 Problem Statement</h2>
+<ul>
+  <li>Rising stress, anxiety, and emotional burnout</li>
+  <li>Limited access to immediate mental health support</li>
+  <li>Social stigma around expressing mental health concerns</li>
+</ul>
+
+<p>
+There is a need for an <b>always-available, non-judgmental digital companion</b> that supports emotional wellbeing
+and encourages healthy coping strategies.
+</p>
+
+<hr>
+
+<h2>💡 Proposed Solution</h2>
+<p>
+Wellsy provides a <b>web-based AI mental health assistant</b> that allows users to:
+</p>
+
+<ul>
+  <li>Communicate freely in a private and secure environment</li>
+  <li>Select AI personas based on emotional needs</li>
+  <li>Maintain conversation history across sessions</li>
+  <li>Receive safety-aware and empathetic responses</li>
+</ul>
+
+<hr>
+
+<h2>✨ Key Features</h2>
+
+<h3>🔐 Authentication & Security</h3>
+<ul>
+  <li>User login and registration</li>
+  <li>Password-based authentication</li>
+  <li>Secure API key handling via environment variables</li>
+</ul>
+
+<h3>💬 Persistent Chat Sessions</h3>
+<ul>
+  <li>Create multiple chat sessions</li>
+  <li>Rename or delete conversations</li>
+  <li>Automatic chat history loading</li>
+</ul>
+
+<h3>🧠 Multiple AI Personas</h3>
+<table>
+  <tr>
+    <th align="left">Persona</th>
+    <th align="left">Purpose</th>
+  </tr>
+  <tr>
+    <td>Wellsy Counselor</td>
+    <td>Balanced and structured mental health guidance</td>
+  </tr>
+  <tr>
+    <td>Empathetic Listener</td>
+    <td>Emotional validation and active listening</td>
+  </tr>
+  <tr>
+    <td>Growth Coach</td>
+    <td>Encouragement and positive action focus</td>
+  </tr>
+  <tr>
+    <td>CBT Companion</td>
+    <td>Cognitive Behavioral Therapy based support</td>
+  </tr>
+</table>
+
+<h3>🚨 Safety & Crisis Support</h3>
+<ul>
+  <li>Global mental health safety layer</li>
+  <li>Suicide & self-harm awareness handling</li>
+  <li>Country-based crisis resources (India, USA, UK, Canada)</li>
+  <li>Encourages professional and human support</li>
+</ul>
+
+<h3>🌍 Location-Aware Support</h3>
+<ul>
+  <li>Optional country selection</li>
+  <li>Displays relevant crisis helpline information</li>
+</ul>
+
+<h3>🖥️ User Experience</h3>
+<ul>
+  <li>Clean, minimal, distraction-free UI</li>
+  <li>Chat-style interface</li>
+  <li>Auto-scroll & loading indicators</li>
+  <li>Light/Dark theme compatibility</li>
+</ul>
+
+<hr>
+
+<h2>🧩 Application Workflow</h2>
+<ol>
+  <li>User logs in or registers</li>
+  <li>Selects AI persona and country</li>
+  <li>Creates or selects a chat session</li>
+  <li>Enters thoughts or concerns</li>
+  <li>AI generates a context-aware response</li>
+  <li>Conversation is securely stored</li>
+</ol>
+
+<hr>
+
+<h2>⚙️ System Architecture</h2>
+<ul>
+  <li><b>Frontend:</b> Streamlit UI components</li>
+  <li><b>Backend:</b> Python-based session & database handling</li>
+  <li><b>AI Layer:</b> Groq API (LLaMA 3.3 – 70B)</li>
+  <li><b>Deployment:</b> GitHub + Streamlit Community Cloud</li>
+</ul>
+
+<hr>
+
+<h2>📁 Project Structure</h2>
+
+<pre>
 wellsy/
-
 │
-
 ├── app.py              # Main Streamlit application
-
 ├── auth.py             # Authentication & login UI
+├── chatbot.py          # AI personas & safety logic
+├── database.py         # SQLite persistence
+├── requirements.txt
+├── img/
+│   ├── logo.png
+│   └── icon.png
+└── README.md
+</pre>
 
-├── chatbot.py          # AI logic, personas & safety layer
+<hr>
 
-├── database.py         # User & chat persistence (SQLite)
+<h2>🛠️ Local Installation</h2>
 
-├── requirements.txt    # Dependencies
-
-├── img/                # Logos & icons
-
-├── README.md           # Documentation
-
-└── .gitignore
-🛠️ Local Setup & Installation
-1️⃣ Clone Repository
-git clone https://github.com/payalrvs3/Wellsy---AI-Mental-Health-Companion.git
+<pre>
+git clone https://github.com/your-username/wellsy.git
 cd wellsy
-2️⃣ Install Dependencies
 pip install -r requirements.txt
-3️⃣ Configure Environment Variables
-
-Create a .env file:
-
-GROQ_API_KEY=your_api_key_here
-4️⃣ Run the App
 streamlit run app.py
-📊 Results & Outcomes
+</pre>
 
-Successfully built and deployed a full-stack AI mental health app
+<hr>
 
-Implemented authentication, persistence, safety, and personalization
+<h2>📊 Results</h2>
+<ul>
+  <li>Successfully deployed a full-stack AI mental health app</li>
+  <li>Implemented safety-first AI design</li>
+  <li>Demonstrated cloud deployment & real-world usability</li>
+</ul>
 
-Demonstrated real-world AI integration and cloud deployment
+<hr>
 
-Suitable for academic projects, internships, and AI portfolios
+<h2>🏁 Conclusion</h2>
+<p>
+Wellsy demonstrates how <b>responsible AI, thoughtful UX, and cloud technologies</b> can be combined to build
+meaningful mental health support systems while prioritizing user safety.
+</p>
 
+<hr>
 
-<h3>🏁 Conclusion</h3>
+<h2>🔮 Future Scope</h2>
+<ul>
+  <li>Mood tracking & analytics</li>
+  <li>Multilingual support</li>
+  <li>Mobile application</li>
+  <li>Professional therapist integration</li>
+</ul>
 
-Wellsy demonstrates how AI, responsible prompt design, and thoughtful UX can be combined to create meaningful mental health support tools. The project emphasizes user safety, empathy, personalization, and real-world deployment ’best practices’.
+<hr>
 
+<h2>👤 Author</h2>
+<p>
+<b>Payal Sumbhe</b><br>
+AI Developer
+</p>
 
-<h4>🔮 Future Scope</h4>
-
-Mood & sentiment analytics
-
-Long-term emotional tracking
-
-Professional therapist integration
-
-Multilingual support
-
-Mobile app version
-
-Crisis escalation workflows
+<p align="center">
+🌱 <i>Your safe space for mental wellbeing</i>
+</p>
