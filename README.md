@@ -172,14 +172,23 @@ Secrets Manager for secure keys
 
 <h4>📁 Project Structure</h4>
 wellsy/
+
 │
+
 ├── app.py              # Main Streamlit application
+
 ├── auth.py             # Authentication & login UI
+
 ├── chatbot.py          # AI logic, personas & safety layer
+
 ├── database.py         # User & chat persistence (SQLite)
+
 ├── requirements.txt    # Dependencies
+
 ├── img/                # Logos & icons
+
 ├── README.md           # Documentation
+
 └── .gitignore
 🛠️ Local Setup & Installation
 1️⃣ Clone Repository
