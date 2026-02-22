@@ -1,4 +1,4 @@
-<h1 align="center">🧠 Wellsy – AI Mental Health Companion</h1>
+<h1 align="center"> Wellsy – AI Mental Health Companion</h1>
 
 <p align="center">
   <b>Designed for Mental Wellness • Built with Streamlit & AI</b>
@@ -200,15 +200,3 @@ meaningful mental health support systems while prioritizing user safety.
   <li>Mobile application</li>
   <li>Professional therapist integration</li>
 </ul>
-
-<hr>
-
-<h2>👤 Author</h2>
-<p>
-<b>Payal Sumbhe</b><br>
-AI Developer
-</p>
-
-<p align="center">
-🌱 <i>Your safe space for mental wellbeing</i>
-</p>
