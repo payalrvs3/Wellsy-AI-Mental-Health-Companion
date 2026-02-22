@@ -183,7 +183,7 @@ wellsy/
 └── .gitignore
 🛠️ Local Setup & Installation
 1️⃣ Clone Repository
-git clone https://github.com/your-username/wellsy.git
+git clone https://github.com/payalrvs3/Wellsy---AI-Mental-Health-Companion.git
 cd wellsy
 2️⃣ Install Dependencies
 pip install -r requirements.txt
