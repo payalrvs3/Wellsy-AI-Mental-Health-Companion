@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Wellsy
+data/
+*.db
+*.db-wal
+*.db-shm
+.streamlit/secrets.toml
