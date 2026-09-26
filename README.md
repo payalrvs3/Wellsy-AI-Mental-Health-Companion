@@ -1,202 +1,122 @@
-<h1 align="center"> Wellsy – AI Mental Health Companion</h1>
+# Wellsy: AI Mental Health Companion
 
-<p align="center">
-  <b>Designed for Mental Wellness • Built with Streamlit & AI</b>
-</p>
+A private, supportive space to talk things through, track your mood, write, and learn calming skills, with safety built in from the start.
 
-<p align="center">
-  <img src="img/logo.png" alt="Wellsy Logo" width="180"/>
-</p>
+**Live app:** https://wellsy.streamlit.app/
 
-<hr>
+| | |
+|---|---|
+| ![Home dashboard](docs/screenshots/home.png) | ![Chat](docs/screenshots/chat.png) |
+| ![Insights](docs/screenshots/insights.png) | ![Toolkit](docs/screenshots/toolkit.png) |
 
-<h2>🌱 Overview</h2>
-<p>
-<b>Wellsy</b> is a secure, AI-powered mental health companion designed to provide users with a
-<strong>safe, empathetic, and structured space</strong> to express emotions and thoughts.
-</p>
+<details>
+<summary>More screenshots</summary>
 
-<p>
-Unlike generic chatbots, Wellsy includes <b>authentication, multiple AI personas, persistent chat sessions,
-safety-aware responses, and crisis support handling</b>.
-</p>
+![Sign in](docs/screenshots/login.png)
+![Dark mode](docs/screenshots/home-dark.png)
+![Get help](docs/screenshots/get-help.png)
 
-<hr>
+</details>
 
-<h2>🔗 Live Application</h2>
-<p>
-👉 <b>Live App:</b>
-<a href="https://wellsy.streamlit.app/" target="_blank">
-https://wellsy.streamlit.app/
-</a>
-</p>
+> Wellsy is a supportive companion. It is not a medical device, a therapist, or an emergency service.
 
-<hr>
+## Features
 
-<h2>🎯 Problem Statement</h2>
-<ul>
-  <li>Rising stress, anxiety, and emotional burnout</li>
-  <li>Limited access to immediate mental health support</li>
-  <li>Social stigma around expressing mental health concerns</li>
-</ul>
+**Talk**
+- Multiple saved conversations that can be renamed, exported and deleted, with automatic titles.
+- Five personas: Wellsy Counselor, Empathetic Listener, Growth Coach, CBT Companion and Mindfulness Guide.
+- Streaming replies. Optional personalisation from a short summary of your recent mood, check-in scores and journal tags (can be switched off).
 
-<p>
-There is a need for an <b>always-available, non-judgmental digital companion</b> that supports emotional wellbeing
-and encourages healthy coping strategies.
-</p>
+**Track**
+- **Mood tracker:** mood, feelings, activities, sleep and a short note.
+- **Insights:** 7, 30 or 90 day views with trend and 7-day average, weekday pattern, common feelings, what lifts your mood, sleep against mood and a calendar heatmap.
+- **Journal:** writing prompts, tags, search, editing and an optional AI reflection.
+- **Check-ins:** PHQ-9 and GAD-7 questionnaires with score history.
+- **Summary for a professional:** a plain-language report and CSV you can download and share.
 
-<hr>
+**Care**
+- **Toolkit:** guided breathing (box, 4-7-8, 5-5), 5-4-3-2-1 grounding, and a CBT thought record with an optional AI reframe.
+- **Get help:** helplines for India, USA, UK, Canada and Australia, plus a personal safety plan modelled on the Stanley-Brown steps.
 
-<h2>💡 Proposed Solution</h2>
-<p>
-Wellsy provides a <b>web-based AI mental health assistant</b> that allows users to:
-</p>
+**Account**
+- bcrypt password hashing, sign-in lockout after repeated failures, per-user data isolation.
+- Download all your data as JSON, or delete your account and everything in it.
 
-<ul>
-  <li>Communicate freely in a private and secure environment</li>
-  <li>Select AI personas based on emotional needs</li>
-  <li>Maintain conversation history across sessions</li>
-  <li>Receive safety-aware and empathetic responses</li>
-</ul>
+## Safety and privacy
 
-<hr>
+- Risk language (English plus a few Hinglish phrases) in chat, journal, mood notes and thought records shows helplines immediately. This keyword check is a backstop alongside the AI's own safety rules, not a substitute for them.
+- PHQ-9 item 9 always shows helplines when answered above zero.
+- Helplines were checked against official sources in September 2026. Please re-verify them periodically (`core/safety.py`).
+- What is stored: your account, chats, journal, check-ins and safety plan, in the app's SQLite database.
+- What leaves the app: chat messages, journal reflections you request, and (if enabled) a short summary of your recent mood, check-in scores and journal tags are sent to [Groq](https://groq.com) to generate replies. The summary carries entry counts, scores and journal tags, never full journal text. Nothing else is shared, and there is no analytics tracking.
 
-<h2>✨ Key Features</h2>
+## Getting started
 
-<h3>🔐 Authentication & Security</h3>
-<ul>
-  <li>User login and registration</li>
-  <li>Password-based authentication</li>
-  <li>Secure API key handling via environment variables</li>
-</ul>
+Requires Python 3.11 or newer.
 
-<h3>💬 Persistent Chat Sessions</h3>
-<ul>
-  <li>Create multiple chat sessions</li>
-  <li>Rename or delete conversations</li>
-  <li>Automatic chat history loading</li>
-</ul>
-
-<h3>🧠 Multiple AI Personas</h3>
-<table>
-  <tr>
-    <th align="left">Persona</th>
-    <th align="left">Purpose</th>
-  </tr>
-  <tr>
-    <td>Wellsy Counselor</td>
-    <td>Balanced and structured mental health guidance</td>
-  </tr>
-  <tr>
-    <td>Empathetic Listener</td>
-    <td>Emotional validation and active listening</td>
-  </tr>
-  <tr>
-    <td>Growth Coach</td>
-    <td>Encouragement and positive action focus</td>
-  </tr>
-  <tr>
-    <td>CBT Companion</td>
-    <td>Cognitive Behavioral Therapy based support</td>
-  </tr>
-</table>
-
-<h3>🚨 Safety & Crisis Support</h3>
-<ul>
-  <li>Global mental health safety layer</li>
-  <li>Suicide & self-harm awareness handling</li>
-  <li>Country-based crisis resources (India, USA, UK, Canada)</li>
-  <li>Encourages professional and human support</li>
-</ul>
-
-<h3>🌍 Location-Aware Support</h3>
-<ul>
-  <li>Optional country selection</li>
-  <li>Displays relevant crisis helpline information</li>
-</ul>
-
-<h3>🖥️ User Experience</h3>
-<ul>
-  <li>Clean, minimal, distraction-free UI</li>
-  <li>Chat-style interface</li>
-  <li>Auto-scroll & loading indicators</li>
-  <li>Light/Dark theme compatibility</li>
-</ul>
-
-<hr>
-
-<h2>🧩 Application Workflow</h2>
-<ol>
-  <li>User logs in or registers</li>
-  <li>Selects AI persona and country</li>
-  <li>Creates or selects a chat session</li>
-  <li>Enters thoughts or concerns</li>
-  <li>AI generates a context-aware response</li>
-  <li>Conversation is securely stored</li>
-</ol>
-
-<hr>
-
-<h2>⚙️ System Architecture</h2>
-<ul>
-  <li><b>Frontend:</b> Streamlit UI components</li>
-  <li><b>Backend:</b> Python-based session & database handling</li>
-  <li><b>AI Layer:</b> Groq API (LLaMA 3.3 – 70B)</li>
-  <li><b>Deployment:</b> GitHub + Streamlit Community Cloud</li>
-</ul>
-
-<hr>
-
-<h2>📁 Project Structure</h2>
-
-<pre>
-wellsy/
-│
-├── app.py              # Main Streamlit application
-├── auth.py             # Authentication & login UI
-├── chatbot.py          # AI personas & safety logic
-├── database.py         # SQLite persistence
-├── requirements.txt
-├── img/
-│   ├── logo.png
-│   └── icon.png
-└── README.md
-</pre>
-
-<hr>
-
-<h2>🛠️ Local Installation</h2>
-
-<pre>
-git clone https://github.com/your-username/wellsy.git
-cd wellsy
+```bash
+git clone https://github.com/payalrvs3/Wellsy-AI-Mental-Health-Companion.git
+cd Wellsy-AI-Mental-Health-Companion
 pip install -r requirements.txt
+cp .env.example .env        # add your GROQ_API_KEY
 streamlit run app.py
-</pre>
+```
 
-<hr>
+Want to look around with sample data first? Run `python -m scripts.seed_demo`, then sign in with `demo` / `demo-password`.
 
-<h2>📊 Results</h2>
-<ul>
-  <li>Successfully deployed a full-stack AI mental health app</li>
-  <li>Implemented safety-first AI design</li>
-  <li>Demonstrated cloud deployment & real-world usability</li>
-</ul>
+### Configuration
 
-<hr>
+| Variable | Default | Purpose |
+|---|---|---|
+| `GROQ_API_KEY` | none | Enables chat, journal reflections and reframes. |
+| `WELLSY_MODEL` | `openai/gpt-oss-120b` | Any chat model available to your Groq account. Groq retires models over time, so check [their deprecations page](https://console.groq.com/docs/deprecations). |
+| `WELLSY_DB` | `data/wellsy.db` | Location of the SQLite database. |
 
-<h2>🏁 Conclusion</h2>
-<p>
-Wellsy demonstrates how <b>responsible AI, thoughtful UX, and cloud technologies</b> can be combined to build
-meaningful mental health support systems while prioritizing user safety.
-</p>
+## Deployment
 
-<hr>
+- **Streamlit Community Cloud:** add `GROQ_API_KEY` under *Secrets*. Its filesystem is not persistent, so accounts and chats are lost when the app restarts. Use it for demos only.
+- **Docker (recommended for real use):**
+  ```bash
+  docker build -t wellsy .
+  docker run -p 8501:8501 -e GROQ_API_KEY=your-key -v wellsy-data:/data wellsy
+  ```
+  The volume keeps the database between restarts.
 
-<h2>🔮 Future Scope</h2>
-<ul>
-  <li>Mood tracking & analytics</li>
-  <li>Multilingual support</li>
-  <li>Mobile application</li>
-  <li>Professional therapist integration</li>
-</ul>
+## Project structure
+
+```
+app.py            Entry point: page setup, sign-in gate, navigation
+core/
+  db.py           SQLite, migrations and user-scoped helpers
+  auth.py         Registration, sign-in, lockout, account deletion
+  ai.py           Groq client, personas, streaming and one-shot replies
+  safety.py       Helplines and risk-language check
+  stats.py        Mood analytics with pandas
+  charts.py       Altair charts
+  content.py      Prompts, questionnaires and other static content
+  ui.py           Theme CSS and shared components
+views/            One file per page
+scripts/          Demo data seeding
+tests/            pytest suite
+```
+
+## Development
+
+```bash
+pip install -r requirements-dev.txt
+ruff check . && ruff format --check .
+pytest
+```
+
+The tests cover the database, authentication, safety checks, analytics, the AI layer (with a fake client) and every page.
+
+## Roadmap
+
+- Hosted database for persistent cloud deployment.
+- Stay signed in across browser refreshes.
+- Reminders for daily check-ins.
+- More languages and more countries' helplines.
+
+## Credits
+
+The PHQ-9 and GAD-7 questionnaires were developed by Drs. Spitzer, Williams, Kroenke and colleagues and are free to use. Licensed under the [MIT License](LICENSE). Built by Payal Sumbhe, Vrapo.Tech.
